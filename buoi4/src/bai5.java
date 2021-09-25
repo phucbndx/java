@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class bai5 {
+    public static void main(String[] args) {
+        System.out.print("\033[H\033[2J");
+        System.out.flush();
+        String chuoi;
+        char kyTu = 'i';
+        int count = 0;
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Nhập vào chuỗi bất kỳ: ");
+        chuoi = scanner.nextLine();
+        System.out.println(" Chuoi vua nhap la:" + chuoi);
+        // duyệt từ đầu đến cuối chuỗi
+
+        for (int i = 0; i < chuoi.length(); i++) {
+            // Nếu ký tự tại vị trí thứ i bằng 'a' thì tăng count lên 1
+            if (Character.isUpperCase(chuoi.charAt(i))) {
+                count++;
+
+            }
+
+        }
+
+        System.out.println("Số lần in hoa  trong chuỗi: " + count);
+    }
+}
